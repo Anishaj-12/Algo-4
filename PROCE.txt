@@ -1,0 +1,15 @@
+PROCEDURE Sort (var Tab :array of integer)
+VAR
+i,j,temp : integer
+BEGIN
+    FOR i FROM 0 TO  Tab.length-1  STEP 1  DO
+       FOR j FROM 1 TO i STEP 1  DO
+           if (Tab[j-1]>Tab[j])
+             temp =Tab[j-1] ;
+             Tab[j-1]=Tab[j];
+             Tab[j]= temp;
+             endif
+       END_FOR
+       
+    END_FOR
+END
